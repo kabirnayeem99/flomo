@@ -5,6 +5,16 @@
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
   </component>
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/ic_check_circle_black_24dp.xml" value="0.26" />
+        <entry key="app/src/main/res/drawable/ic_error_black_24dp.xml" value="0.26" />
+        <entry key="app/src/main/res/drawable/ic_pause_circle_filled_black_24dp.xml" value="0.26" />
+        <entry key="app/src/main/res/layout/activity_flomo_demo.xml" value="0.2557291666666667" />
+      </map>
+    </option>
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">

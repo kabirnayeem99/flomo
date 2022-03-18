@@ -10,12 +10,10 @@ import android.os.Build
 import android.os.Build.VERSION_CODES
 import androidx.annotation.RequiresApi
 import androidx.core.content.getSystemService
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.channels.ProducerScope
 import kotlinx.coroutines.launch
 
 @RequiresApi(VERSION_CODES.M)
-@ExperimentalCoroutinesApi
 internal class Flomo23NetworkStream(override val producerScope: ProducerScope<FlomoNetwork>) :
     NetworkCallback(), FlomoNetworkStream {
 
@@ -45,6 +43,7 @@ internal class Flomo23NetworkStream(override val producerScope: ProducerScope<Fl
                 else -> false
             }
         } else {
+            @Suppress("DEPRECATION")
             return connectivityManager.activeNetworkInfo?.isConnected ?: false
         }
     }

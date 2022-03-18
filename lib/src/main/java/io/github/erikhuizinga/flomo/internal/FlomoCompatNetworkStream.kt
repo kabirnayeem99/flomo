@@ -14,14 +14,14 @@ internal class FlomoCompatNetworkStream(override val producerScope: ProducerScop
     override fun subscribe(context: Context) {
         context.registerReceiver(
             this,
-            IntentFilter(@Suppress("DEPRECATION") ConnectivityManager.CONNECTIVITY_ACTION)
+            IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)
         )
     }
 
     override fun onReceive(context: Context?, intent: Intent?) {
         intent
             ?.getParcelableExtra<NetworkInfo>(
-                @Suppress("DEPRECATION") ConnectivityManager.EXTRA_NETWORK_INFO
+                ConnectivityManager.EXTRA_NETWORK_INFO
             )
             ?.let { producerScope.apply { launch { send(FlomoCompatNetwork(it)) } } }
     }

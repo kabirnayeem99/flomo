@@ -5,8 +5,8 @@ plugins {
 }
 
 android {
-    compileSdkVersion(COMPILE_SDK_VERSION)
 
+    compileSdk = 32
     defaultConfig {
         applicationId = "io.github.erikhuizinga.flomo"
         versionCode = 1
@@ -35,32 +35,20 @@ android {
 
 dependencies {
     implementation(fileTree("libs") { include("*.jar") })
-
-    // Flomo
     implementation(project(":lib"))
-
-    // Kotlin
     implementation(kotlin("stdlib"))
-
-    // AndroidX
-    implementation("androidx.appcompat:appcompat:$ANDROIDX_APPCOMPAT")
-    implementation("androidx.core:core-ktx:$ANDROIDX_CORE_KTX")
-    implementation("androidx.constraintlayout:constraintlayout:$ANDROIDX_CONSTRAINTLAYOUT")
-    // ViewModel
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$ANDROIDX_LIFECYCLE_EXTENSIONS")
-    // ViewModel utilities for Compose
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$ANDROIDX_LIFECYCLE_EXTENSIONS")
-    // LiveData
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$ANDROIDX_LIFECYCLE_EXTENSIONS")
-    // Lifecycles only (without ViewModel or LiveData)
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$ANDROIDX_LIFECYCLE_EXTENSIONS")
-    // Saved state module for ViewModel
-    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:$ANDROIDX_LIFECYCLE_EXTENSIONS")
-
+    implementation("androidx.appcompat:appcompat:1.4.1")
+    implementation("com.google.android.material:material:1.6.0-alpha03")
+    implementation("androidx.core:core-ktx:1.7.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.3")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.1")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.4.1")
 //    implementation("androidx.lifecycle:lifecycle-extensions:$ANDROIDX_LIFECYCLE_EXTENSIONS")
-    androidTestImplementation("androidx.test:runner:$ANDROIDX_TEST_RUNNER")
-    androidTestImplementation("androidx.test.espresso:espresso-core:$ANDROIDX_ESPRESSO_CORE")
-
+    androidTestImplementation("androidx.test:runner:1.4.0")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
     // JUnit
     testImplementation("junit:junit:$JUNIT")
 

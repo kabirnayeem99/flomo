@@ -10,13 +10,12 @@
         android:id="@+id/networkConnectionText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableTop="@drawable/ic_pause_circle_filled_black_24dp"
-        android:drawableTint="@color/colorAccent"
         android:text="@string/network_not_monitoring"
+        app:drawableTint="?android:colorAccent"
+        app:drawableTopCompat="@drawable/ic_pause_circle_filled_black_24dp"
         app:layout_constraintBottom_toTopOf="@id/button"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:targetApi="m" />
+        app:layout_constraintRight_toRightOf="parent" />
 
     <Button
         android:id="@+id/button"

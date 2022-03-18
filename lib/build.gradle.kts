@@ -45,8 +45,8 @@ dependencies {
     api("org.jetbrains.kotlinx:kotlinx-coroutines-core:$KOTLINX_COROUTINES")
 
     // AndroidX
-    implementation("androidx.appcompat:appcompat:$ANDROIDX_APPCOMPAT")
-    implementation("androidx.core:core-ktx:$ANDROIDX_CORE_KTX")
+    implementation("androidx.appcompat:appcompat:1.4.1")
+    implementation("androidx.core:core-ktx:1.7.0")
 
     // JUnit
     testImplementation("junit:junit:$JUNIT")

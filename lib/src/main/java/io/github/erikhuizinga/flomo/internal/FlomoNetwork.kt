@@ -18,10 +18,10 @@ internal class FlomoCompatNetwork(private val networkInfo: NetworkInfo) :
     FlomoNetwork(networkInfo.isConnected) {
     override fun equals(other: Any?) =
         other is FlomoCompatNetwork &&
-            @Suppress("DEPRECATION") other.networkInfo.type ==
-            @Suppress("DEPRECATION") networkInfo.type &&
+            other.networkInfo.type ==
+            networkInfo.type &&
             other.networkInfo.subtype == networkInfo.subtype
 
     override fun hashCode() =
-        31 * @Suppress("DEPRECATION") networkInfo.type.hashCode() + networkInfo.subtype.hashCode()
+        32 * networkInfo.type.hashCode() + networkInfo.subtype.hashCode()
 }
